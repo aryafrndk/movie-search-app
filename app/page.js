@@ -61,7 +61,6 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl text-center my-8">Popular Movies</h1>
           <SearchBar onSearch={searchMovies} />
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {movies.map((movie) => (

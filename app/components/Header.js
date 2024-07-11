@@ -1,14 +1,27 @@
-import React from 'react';
+"use client";
 
-const Header = () => {
+import React from 'react';
+import { useRouter } from 'next/navigation';
+
+const Header = ({ onOpenYearFilter }) => {
+  const router = useRouter();
+
   return (
-    <header className="bg-gray-800 text-white p-4">
-      <div className="container mx-auto">
-        <h1 className="text-2xl font-bold">Movie Search App</h1>
-      </div>
+    <header className="flex justify-between items-center py-4">
+      <h1
+        className="text-4xl cursor-pointer"
+        onClick={() => router.push('/')}
+      >
+        Movie Search
+      </h1>
+      <button
+        className="bg-black text-white font-bold py-2 px-4 rounded"
+        onClick={onOpenYearFilter}
+      >
+        Select Year
+      </button>
     </header>
   );
 };
 
 export default Header;
- 
